@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobileapps_NASA_API.MainPage">
+
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Image Source="nasa_logo.png"
+               Grid.Row="0"
+               Grid.Column="0"
+               HeightRequest="60"
+               WidthRequest="60"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Aspect="AspectFit"/>
+     
+            <Button x:Name="Recent_button"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Recent"
+                    HeightRequest="50"
+                    Clicked="Recent_Button_Clicked"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start"
+                    />
+            <Button x:Name="Popular_button"
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="Popular"
+                HeightRequest="50"
+                Clicked="Popular_button_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                />
+ 
+    </Grid>
+
+</ContentPage>
