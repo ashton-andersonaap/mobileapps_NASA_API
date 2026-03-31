@@ -12,11 +12,11 @@ namespace mobileapps_NASA_API
 
         HttpClient _client = new HttpClient();
 
-        public async Task<Rootobject> GetNASAData(string SearchQuery)
+        public async Task<List<Item>> GetNASAData(string SearchQuery)
         {
        
 
-            string requestURL = $"{API_URL}/search?q={SearchQuery}";
+            string requestURL = $"{API_URL}/search?q={SearchQuery}&media_type=image";
 
             HttpRequestMessage request = new(HttpMethod.Get, requestURL);
 
@@ -34,7 +34,7 @@ namespace mobileapps_NASA_API
 
             Rootobject result = JsonConvert.DeserializeObject<Rootobject>(contentString);
 
-            return result;
+            return result.collection.items?.ToList() ?? new List<Item>();
 
 
 

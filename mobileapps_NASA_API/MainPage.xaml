@@ -8,6 +8,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -42,7 +43,44 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Start"
                 />
- 
+        <SearchBar x:Name="SearchInput"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="3"
+                       Placeholder="Search..."
+                       SearchButtonPressed="SearchInput_SearchButtonPressed"/>
+
+
+        <CollectionView x:Name="NASACollection"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3">
+            <CollectionView.ItemsLayout>
+            <GridItemsLayout Span="3" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" Margin="5" HasShadow="False">
+                            <VerticalStackLayout Spacing="5">
+                                <Image HeightRequest="200"
+                                       WidthRequest="200"
+                                       Aspect="AspectFill"
+                                       Source="{Binding ImageUrl}"/>
+                                <Label Text="{Binding Title}"
+                                       FontSize="12"
+                                       FontAttributes="Bold"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="2"/>
+                            <Label Text="{Binding Description}"
+                                       FontSize="10"
+                                       TextColor="Grey"
+                                       LineBreakMode="WordWrap"
+                                       MaxLines="3"/>
+
+                        </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+        </CollectionView>
+
     </Grid>
 
 </ContentPage>

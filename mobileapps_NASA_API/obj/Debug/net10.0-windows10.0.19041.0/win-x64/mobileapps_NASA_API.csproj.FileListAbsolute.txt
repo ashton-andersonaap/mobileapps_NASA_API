@@ -1,3 +1,15 @@
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.csproj.AssemblyReference.cache
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauiimage.inputs
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauifont.inputs
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauisplash.inputs
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauimanifest.stamp
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.i.cs
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.cs
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xaml
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\AboutAssets.txt
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\splashSplashScreen.scale-100.png
@@ -7,6 +19,7 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\splashSplashScreen.scale-400.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\OpenSans-Regular.ttf
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\OpenSans-Semibold.ttf
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\nasa_logo.scale-100.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\appiconLargeTile.scale-400.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\appiconLargeTile.scale-200.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\appiconLargeTile.scale-150.png
@@ -374,6 +387,7 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Windows.System.Projection.dll
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Newtonsoft.Json.dll
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\cs\Microsoft.Maui.Controls.resources.dll
@@ -417,18 +431,6 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Web.WebView2.Core.Projection.dll
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.UI.pri
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.UI.Xaml.Controls.pri
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.csproj.AssemblyReference.cache
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauiimage.inputs
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauifont.inputs
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauisplash.inputs
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauimanifest.stamp
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.i.cs
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.g.cs
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xaml
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\sp\splashSplashScreen.scale-100.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\sp\splashSplashScreen.scale-125.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\sp\splashSplashScreen.scale-150.png
@@ -438,6 +440,7 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mauifont.stamp
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\f\OpenSans-Semibold.ttf
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\nasa_logo.scale-100.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\appiconLargeTile.scale-400.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\appiconLargeTile.scale-200.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\appiconLargeTile.scale-150.png
@@ -494,6 +497,7 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.AssemblyInfoInputs.cache
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.AssemblyInfo.cs
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.csproj.CoreCompileInputs.cache
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.sourcelink.json
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlC.stamp
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileap.191ECD3C.Up2Date
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.dll
@@ -516,7 +520,3 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\nasa_logo.scale-100.png
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\nasa_logo.scale-100.png
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Newtonsoft.Json.dll
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.sourcelink.json
