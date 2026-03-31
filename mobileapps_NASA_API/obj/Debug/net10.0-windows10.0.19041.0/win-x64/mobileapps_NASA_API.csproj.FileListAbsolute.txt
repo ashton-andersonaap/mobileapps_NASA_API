@@ -518,3 +518,5 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\nasa_logo.scale-100.png
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\nasa_logo.scale-100.png
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Newtonsoft.Json.dll
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-windows10.0.19041.0\win-x64\mobileapps_NASA_API.sourcelink.json

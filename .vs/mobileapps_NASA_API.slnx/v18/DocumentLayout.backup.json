@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|c:\\users\\andera\\source\\repos\\mobileapps_nasa_api\\mobileapps_nasa_api\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|solutionrelative:mobileapps_nasa_api\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|c:\\users\\andera\\source\\repos\\mobileapps_nasa_api\\mobileapps_nasa_api\\nasa-api-service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|solutionrelative:mobileapps_nasa_api\\nasa-api-service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|c:\\users\\andera\\source\\repos\\mobileapps_nasa_api\\mobileapps_nasa_api\\nasa-image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|solutionrelative:mobileapps_nasa_api\\nasa-image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|c:\\users\\andera\\source\\repos\\mobileapps_nasa_api\\mobileapps_nasa_api\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3C9EDCF2-5B9B-96E7-BE28-F5768E4BEDFC}|mobileapps_NASA_API\\mobileapps_NASA_API.csproj|solutionrelative:mobileapps_nasa_api\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\MainPage.xaml",
+              "RelativeDocumentMoniker": "mobileapps_NASA_API\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\MainPage.xaml",
+              "RelativeToolTip": "mobileapps_NASA_API\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-17T05:49:12.164Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NASA-Image.cs",
+              "DocumentMoniker": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\NASA-Image.cs",
+              "RelativeDocumentMoniker": "mobileapps_NASA_API\\NASA-Image.cs",
+              "ToolTip": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\NASA-Image.cs",
+              "RelativeToolTip": "mobileapps_NASA_API\\NASA-Image.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:20:49.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NASA-API-Service.cs",
+              "DocumentMoniker": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\NASA-API-Service.cs",
+              "RelativeDocumentMoniker": "mobileapps_NASA_API\\NASA-API-Service.cs",
+              "ToolTip": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\NASA-API-Service.cs",
+              "RelativeToolTip": "mobileapps_NASA_API\\NASA-API-Service.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:12:13.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "mobileapps_NASA_API\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\MainPage.xaml.cs*",
+              "RelativeToolTip": "mobileapps_NASA_API\\MainPage.xaml.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAASwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T06:08:45.575Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
