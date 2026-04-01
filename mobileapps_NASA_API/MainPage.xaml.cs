@@ -15,7 +15,12 @@ namespace mobileapps_NASA_API
         {
 
             NASA_API_Service service = new();
-            var items = await service.GetNASAData("Nebula");
+            var items = await service.GetNASAData(null);
+
+            items = items.OrderByDescending(item =>
+                item.data?[0]?.date_created ?? DateTime.MinValue
+                )
+                .ToList();
 
             List<NASAItemViewModel> displayList = new();
 
@@ -24,6 +29,7 @@ namespace mobileapps_NASA_API
                 var title = item.data?[0]?.title;
                 var img = item.links?[0]?.href;
                 var description = item.data?[0]?.description;
+                var date = item.data?[0]?.date_created;
 
                 if (!string.IsNullOrEmpty(img) && !string.IsNullOrEmpty(title))
                 {
@@ -31,7 +37,8 @@ namespace mobileapps_NASA_API
                     {
                         Title = title,
                         ImageUrl = img,
-                        Description = description ?? "No Description"
+                        Description = description ?? "No Description",
+                        date = date ?? DateTime.MinValue
                     });
                 }
 
@@ -67,6 +74,7 @@ namespace mobileapps_NASA_API
                 var title = item.data?[0]?.title;
                 var img = item.links?[0]?.href;
                 var description = item.data?[0]?.description;
+                var date = item.data?[0]?.date_created;
 
                 if (!string.IsNullOrEmpty(img) && !string.IsNullOrEmpty(title))
                 {
@@ -74,7 +82,8 @@ namespace mobileapps_NASA_API
                     {
                         Title = title,
                         ImageUrl = img,
-                        Description = description ?? "No Description"
+                        Description = description ?? "No Description",
+                        date = date ?? DateTime.MinValue
                     });
                 }
 
