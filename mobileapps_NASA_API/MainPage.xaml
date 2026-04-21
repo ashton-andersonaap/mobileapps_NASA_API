@@ -33,6 +33,7 @@
                     Clicked="Recent_Button_Clicked"
                     VerticalOptions="Center"
                     HorizontalOptions="Start"
+                    BackgroundColor="#003c92"
                     />
             <Button x:Name="Popular_button"
                 Grid.Row="0"
@@ -42,6 +43,7 @@
                 Clicked="Popular_button_Clicked"
                 VerticalOptions="Center"
                 HorizontalOptions="Start"
+                BackgroundColor="#003c92"
                 />
         <SearchBar x:Name="SearchInput"
                        Grid.Row="1"
@@ -51,34 +53,53 @@
 
 
         <CollectionView x:Name="NASACollection"
-                        Grid.Row="2"
-                        Grid.ColumnSpan="3">
+                Grid.Row="2"
+                Grid.ColumnSpan="3">
+
             <CollectionView.ItemsLayout>
-            <GridItemsLayout Span="3" Orientation="Vertical"/>
+                <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="0" />
             </CollectionView.ItemsLayout>
+
             <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Padding="5" Margin="5" HasShadow="False">
-                            <VerticalStackLayout Spacing="5">
-                                <Image HeightRequest="200"
-                                       WidthRequest="200"
-                                       Aspect="AspectFill"
-                                       Source="{Binding ImageUrl}"/>
-                            <Label     Text="{Binding TitleWithDate}"
-                                       FontSize="12"
-                                       FontAttributes="Bold"
-                                       LineBreakMode="TailTruncation"
-                                       MaxLines="2"/>
+                <DataTemplate>
+
+                    <Grid HeightRequest="{Binding Source={x:Reference NASACollection}, Path=Height}">
+
+                        <!-- FULL SCREEN IMAGE -->
+                        <Image Source="{Binding ImageUrl}"
+                       Aspect="AspectFill"
+                       VerticalOptions="Fill"
+                       HorizontalOptions="Fill"/>
+
+                        <!-- DARK OVERLAY -->
+                        <BoxView Color="Black"
+                         Opacity="0.35"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Fill"/>
+
+                        <!-- TEXT OVERLAY -->
+                        <VerticalStackLayout Padding="20"
+                                     VerticalOptions="End">
+
+                            <Label Text="{Binding TitleWithDate}"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           MaxLines="2"/>
+
                             <Label Text="{Binding Description}"
-                                           FontSize="10"
-                                           TextColor="Grey"
-                                           LineBreakMode="WordWrap"
-                                           MaxLines="3"/>
+                           FontSize="12"
+                           TextColor="White"
+                           MaxLines="3"/>
 
                         </VerticalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
         </CollectionView>
 
     </Grid>

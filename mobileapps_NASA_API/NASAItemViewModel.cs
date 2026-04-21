@@ -11,7 +11,7 @@ namespace mobileapps_NASA_API
         public string Description { get; set; }
         public DateTime date { get; set; }
 
-        public string FormattedDate => date.ToString("dd MM yy");
+        public string FormattedDate => date.ToString("dd-MM-yy");
 
         public string TitleWithDate => $"{Title} - {FormattedDate}";
     }
