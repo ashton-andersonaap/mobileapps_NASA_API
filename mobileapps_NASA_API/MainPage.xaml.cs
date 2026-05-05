@@ -1,16 +1,25 @@
 ﻿//using Android.Runtime;
+using mobileapps_NASA_API.Models;
 using System.Threading.Tasks;
+using System.Text.Json;
+using Microsoft.Maui.Storage;
+using mobileapps_NASA_API.Services;
 
 namespace mobileapps_NASA_API
 {
     public partial class MainPage : ContentPage
     {
+        //private UserProfile currentUser;
+
 
         public MainPage()
         {
             InitializeComponent();
             string lastImageSearch = Preferences.Get("LastImageSearched", "Nebula");
             SearchInput.Text = lastImageSearch;
+
+            //LoadUser();
+
         }
 
         private async void Recent_Button_Clicked(object sender, EventArgs e)
