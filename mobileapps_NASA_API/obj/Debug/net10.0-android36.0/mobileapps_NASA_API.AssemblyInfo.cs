@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mobileapps_NASA_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+52f7b74d6350439256c3c8dc6b919866320939c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+83bb267625ca430f5f32ef000b2ae5298b676193")]
 [assembly: System.Reflection.AssemblyProductAttribute("mobileapps_NASA_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mobileapps_NASA_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
