@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="mobileapps_NASA_API" mvid="90b06c91db414409a7eb8de2bb8eb957">
+<api type="debug" assembly-name="mobileapps_NASA_API" mvid="16b9a1f30c00457f90d241c5c42cc5b4">
   <java-to-managed>
     <entry java-name="crc647b4201698f6fed41/MainActivity" managed-name="mobileapps_NASA_API.MainActivity, mobileapps_NASA_API" managed-type-token-id="33554442" />
     <entry java-name="crc647b4201698f6fed41/MainApplication" managed-name="mobileapps_NASA_API.MainApplication, mobileapps_NASA_API" managed-type-token-id="33554443" />

@@ -9,7 +9,7 @@ namespace mobileapps_NASA_API
 {
     public partial class MainPage : ContentPage
     {
-        //private UserProfile currentUser;
+        private UserService userService = new UserService();
 
 
         public MainPage()
@@ -18,7 +18,7 @@ namespace mobileapps_NASA_API
             string lastImageSearch = Preferences.Get("LastImageSearched", "Nebula");
             SearchInput.Text = lastImageSearch;
 
-            //LoadUser();
+            userService.LoadUser();
 
         }
 
@@ -46,6 +46,7 @@ namespace mobileapps_NASA_API
                 {
                     displayList.Add(new NASAItemViewModel
                     {
+                        Id = item.data?[0]?.nasa_id,
                         Title = title,
                         ImageUrl = img,
                         Description = description ?? "No Description",
@@ -83,6 +84,7 @@ namespace mobileapps_NASA_API
                 {
                     displayList.Add(new NASAItemViewModel
                     {
+                        Id = item.data?[0]?.nasa_id,
                         Title = title,
                         ImageUrl = img,
                         Description = description ?? "No Description",
@@ -123,6 +125,7 @@ namespace mobileapps_NASA_API
                 {
                     displayList.Add(new NASAItemViewModel
                     {
+                        Id = item.data?[0]?.nasa_id,
                         Title = title,
                         ImageUrl = img,
                         Description = description ?? "No Description",
@@ -153,6 +156,11 @@ namespace mobileapps_NASA_API
                 return;
             }
 
+
+        }
+
+        private void SaveButton_Clicked(object sender, EventArgs e)
+        {
 
         }
     }

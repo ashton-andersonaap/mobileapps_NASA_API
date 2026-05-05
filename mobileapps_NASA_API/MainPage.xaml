@@ -93,6 +93,13 @@
                            TextColor="White"
                            MaxLines="3"/>
 
+                            <Button Text="Save"
+                             Clicked="SaveButton_Clicked"
+                             BackgroundColor="#003c92"
+                             TextColor="White"
+                             FontSize="12"
+                             HorizontalOptions="Start"
+                             Padding="10,5"/>
                         </VerticalStackLayout>
 
                     </Grid>
