@@ -10,16 +10,16 @@ namespace mobileapps_NASA_API
 {
     public partial class MainPage : ContentPage
     {
-        private UserService userService = new UserService();
+        private readonly UserService _userService;
 
 
-        public MainPage()
+        public MainPage(UserService userService)
         {
             InitializeComponent();
             string lastImageSearch = Preferences.Get("LastImageSearched", "Nebula");
             SearchInput.Text = lastImageSearch;
 
-            
+            _userService = userService;
 
             userService.LoadUser();
 
@@ -173,7 +173,7 @@ namespace mobileapps_NASA_API
                 return;
             }
 
-            userService.SaveItemToList(item, listName);
+            _userService.SaveItemToList(item, listName);
 
             await DisplayAlert("Saved", $"Added to {listName}", "OK");
 

@@ -25,34 +25,21 @@
                VerticalOptions="Center"
                Aspect="AspectFit"/>
 
-        <Button x:Name="Recent_button"
+        <Label x:Name="Username"
+                    Text="{Binding UserName}"
                     Grid.Row="0"
                     Grid.Column="1"
-                    Text="Recent"
-                    HeightRequest="50"
-                    Clicked="Recent_Button_Clicked"
                     VerticalOptions="Center"
                     HorizontalOptions="Start"
-                    BackgroundColor="#003c92"
+                    VerticalTextAlignment="Center"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="#003c92"
                     />
-        <Button x:Name="Popular_button"
-                Grid.Row="0"
-                Grid.Column="2"
-                Text="Popular"
-                HeightRequest="50"
-                Clicked="Popular_button_Clicked"
-                VerticalOptions="Center"
-                HorizontalOptions="Start"
-                BackgroundColor="#003c92"
-                />
-        <SearchBar x:Name="SearchInput"
-                       Grid.Row="1"
-                       Grid.ColumnSpan="3"
-                       Placeholder="Search..."
-                       SearchButtonPressed="SearchInput_SearchButtonPressed"/>
 
         <VerticalStackLayout>
 
+           
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
