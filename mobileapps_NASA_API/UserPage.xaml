@@ -16,30 +16,116 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="3"
+                               Spacing="10"
+                               VerticalOptions="Center">
+            
+
         <Image Source="nasa_logo.png"
-               Grid.Row="0"
-               Grid.Column="0"
                HeightRequest="60"
                WidthRequest="60"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"
                Aspect="AspectFit"/>
 
-        <Label x:Name="Username"
-                    Text="{Binding UserName}"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Start"
-                    VerticalTextAlignment="Center"
-                    FontSize="24"
-                    FontAttributes="Bold"
-                    TextColor="#003c92"
-                    />
+            <Label x:Name="Username"
+               Text="{Binding UserName}"
+               VerticalTextAlignment="Center"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="#003c92"
+               />
 
-        <VerticalStackLayout>
 
+            <Border
+               BackgroundColor="Transparent"
+               Grid.Column="0"
+               Grid.Row="1"
+               HeightRequest="60"
+               WidthRequest="60"
+               HorizontalOptions="Center"
+                StrokeThickness="0">
+                <Image Source="defaultuser.png"
+                   Aspect="AspectFit">
+
+                    <Image.Clip>
+                        <EllipseGeometry 
+                        Center="30, 30"
+                        RadiusX="30"
+                        RadiusY="30">
+                        </EllipseGeometry>
+                    </Image.Clip>
+                </Image>
+            </Border>
+            
+            
+
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="3"
+                       Spacing="10"
+                       VerticalOptions="Center">
+
+        </HorizontalStackLayout>
+
+
+
+
+            <Label Text="Favourites"
+                   Grid.Row="1"
+                   FontSize="20"
+                   TextColor="#003c92"/>
            
-        </VerticalStackLayout>
+
+      
+            <CollectionView Grid.Row ="3"
+                            Grid.ColumnSpan="3"
+                            ItemsLayout="VerticalList"
+                            ItemsSource="{Binding Favourites.Items}"
+                            >
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Grid HeightRequest="200">
+
+                            <!-- FULL SCREEN IMAGE -->
+                            <Image Source="{Binding ImageUrl}"
+                                Aspect="AspectFill"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill"/>
+
+                            <!-- DARK OVERLAY -->
+                            <BoxView Color="Black"
+                                Opacity="0.35"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill"/>
+
+                            <!-- TEXT OVERLAY -->
+                            <VerticalStackLayout Padding="20"
+                                VerticalOptions="End">
+
+                                <Label Text="{Binding TitleWithDate}"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    TextColor="White"
+                                    MaxLines="2"/>
+
+                                <Label Text="{Binding Description}"
+                                    FontSize="12"
+                                    TextColor="White"
+                                    MaxLines="3"/>
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                
+                
+                
+                
+            </CollectionView>
+           
+       
     </Grid>
 </ContentPage>

@@ -59,10 +59,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Imgs\defaultUser.png" />
 	  <None Remove="Resources\Imgs\nasa_logo.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Imgs\defaultuser.png" />
 	  <MauiImage Include="Resources\Imgs\nasa_logo.png" />
 	</ItemGroup>
 

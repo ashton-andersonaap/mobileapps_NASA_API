@@ -2696,13 +2696,4 @@ C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\n
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\stamp\_GenerateJavaStubs.stamp
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\typemaps.x86_64.ll
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\environment.x86_64.ll
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\marshal_methods.x86_64.ll
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\compressed_assemblies.x86_64.ll
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\typemaps.x86_64.o
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\environment.x86_64.o
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\compressed_assemblies.x86_64.o
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\marshal_methods.x86_64.o
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\android\jni_remap.x86_64.o
-C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\app_shared_libraries\x86_64\libxamarin-app.so
+C:\Users\ANDERA\source\repos\mobileapps_NASA_API\mobileapps_NASA_API\obj\Debug\net10.0-android36.0\resizetizer\r\drawable\defaultuser.png

@@ -155,7 +155,7 @@ namespace mobileapps_NASA_API
             var item = frame?.BindingContext as NASAItemViewModel;
 
             if (item == null)
-            {
+            { 
                 return;
             }
 

@@ -1,5 +1,4 @@
 ﻿using mobileapps_NASA_API.Models;
-
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
@@ -15,6 +14,16 @@ namespace mobileapps_NASA_API.Services
 
         public UserProfile CurrentUser { get; set; }
 
+
+        public List<NASAItemViewModel> GetFavourites()
+        {
+            LoadUser();
+
+            return CurrentUser?.Lists?
+                .FirstOrDefault(l => l.Name == "Favourites")?
+                .Items ?? new List<NASAItemViewModel> ();
+        }
+
         public void LoadUser()
         {
             var json = Preferences.Get(STORAGE_KEY, "");
@@ -28,10 +37,12 @@ namespace mobileapps_NASA_API.Services
             {
                 CurrentUser = new UserProfile()
                 {
-                    UserName = "Ashton",
+                    UserName = "Ashton", 
+                    ProfilePicture = @"defaultuser.png", 
                     Lists = new List<SavedList>()
                     {
-                        new SavedList { Name = "Favourites"}
+                        new SavedList { Name = "Favourites",
+                        Items = new List<NASAItemViewModel>() }
                     }
                 };
 
