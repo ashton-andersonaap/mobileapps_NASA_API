@@ -35,7 +35,7 @@
                     HorizontalOptions="Start"
                     BackgroundColor="#003c92"
                     />
-            <Button x:Name="Popular_button"
+        <Button x:Name="Popular_button"
                 Grid.Row="0"
                 Grid.Column="2"
                 Text="Popular"
@@ -45,6 +45,7 @@
                 HorizontalOptions="Start"
                 BackgroundColor="#003c92"
                 />
+
         <SearchBar x:Name="SearchInput"
                        Grid.Row="1"
                        Grid.ColumnSpan="3"

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
+using System.Linq;
 
 namespace mobileapps_NASA_API.Services
 {
@@ -18,10 +19,15 @@ namespace mobileapps_NASA_API.Services
         public List<NASAItemViewModel> GetFavourites()
         {
             LoadUser();
+            
 
             return CurrentUser?.Lists?
                 .FirstOrDefault(l => l.Name == "Favourites")?
-                .Items ?? new List<NASAItemViewModel> ();
+                .Items?
+                .AsEnumerable()
+                .Reverse()
+                .ToList()
+                ?? new List<NASAItemViewModel> ();
         }
 
         public void LoadUser()

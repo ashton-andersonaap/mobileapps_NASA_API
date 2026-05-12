@@ -19,4 +19,14 @@ public partial class UserPage : ContentPage
 		BindingContext = _userService.CurrentUser;
 
 	}
+
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+
+		_userService.LoadUser();
+
+		BindingContext = null;
+		BindingContext = _userService.CurrentUser;
+	}
 }
