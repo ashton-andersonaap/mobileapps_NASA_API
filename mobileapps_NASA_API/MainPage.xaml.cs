@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using Microsoft.Maui.Storage;
 using mobileapps_NASA_API.Services;
+using System.Globalization;
 
 namespace mobileapps_NASA_API
 {
@@ -17,6 +18,8 @@ namespace mobileapps_NASA_API
             InitializeComponent();
             string lastImageSearch = Preferences.Get("LastImageSearched", "Nebula");
             SearchInput.Text = lastImageSearch;
+
+            
 
             userService.LoadUser();
 
@@ -159,8 +162,20 @@ namespace mobileapps_NASA_API
 
         }
 
-        private void SaveButton_Clicked(object sender, EventArgs e)
+        private async void SaveButton_Clicked(object sender, EventArgs e)
         {
+            var button = sender as Button;
+            var item = button?.BindingContext as NASAItemViewModel;
+            string listName = "Favourites";
+
+            if (item == null)
+            {
+                return;
+            }
+
+            userService.SaveItemToList(item, listName);
+
+            await DisplayAlert("Saved", $"Added to {listName}", "OK");
 
         }
     }

@@ -29,13 +29,22 @@ namespace mobileapps_NASA_API.Services
                 CurrentUser = new UserProfile()
                 {
                     UserName = "Ashton",
-                    Lists = new List<SaveList>()
+                    Lists = new List<SavedList>()
                     {
-                        new SaveList { Name = "Favourites"}
+                        new SavedList { Name = "Favourites"}
                     }
                 };
 
                 SaveUser();
+
+
+                // SAFETY CHECKS
+                CurrentUser.Lists ??= new List<SavedList>();
+
+                foreach (var list in CurrentUser.Lists)
+                {
+                    list.Items ??= new List<NASAItemViewModel>();
+                }
             }
         }
         public void SaveUser()
@@ -51,13 +60,14 @@ namespace mobileapps_NASA_API.Services
             if (list == null)
             {
 
-                if (!list.Items.Any(x => x.Id == item.Id))
-                {
-                    list.Items.Add(item);
-                    SaveUser();
-                }
+                return;
             }
-            return;
+
+            if (!list.Items.Any(x => x.Id == item.Id))
+            {
+                list.Items.Add(item);
+                SaveUser();
+            }
         }
 
 

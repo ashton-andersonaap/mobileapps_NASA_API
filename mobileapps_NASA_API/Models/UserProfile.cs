@@ -7,7 +7,7 @@ namespace mobileapps_NASA_API.Models
     public class UserProfile
     {
         public string UserName { get; set; }
-        public List<SaveList> Lists { get; set; }
+        public List<SavedList> Lists { get; set; }
 
         public string ProfilePicture { get; set; }
     }
