@@ -3,19 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mobileapps_NASA_API.MainPage">
 
+    <Grid x:Name="MainGrid" Padding="20">
 
-    <Grid Padding="20">
+        <!-- PORTRAIT DEFAULT LAYOUT -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
+        <!-- ORIENTATION STATES -->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+
+                <VisualStateGroup x:Name="OrientationStates">
+
+                    <!-- LANDSCAPE -->
+                    <VisualState x:Name="Landscape">
+
+                        <VisualState.StateTriggers>
+                            <OrientationStateTrigger Orientation="Landscape"/>
+                        </VisualState.StateTriggers>
+
+                        <VisualState.Setters>
+
+                            <!-- SEARCH BAR MOVES TO TOP RIGHT -->
+                            <Setter TargetName="SearchInput"
+                                    Property="Grid.Row"
+                                    Value="0"/>
+
+                            <Setter TargetName="SearchInput"
+                                    Property="Grid.Column"
+                                    Value="2"/>
+
+                            <Setter TargetName="SearchInput"
+                                    Property="Grid.ColumnSpan"
+                                    Value="1"/>
+
+                            <!-- COLLECTION VIEW TAKES FULL WIDTH -->
+                            <Setter TargetName="NASACollection"
+                                    Property="Grid.Row"
+                                    Value="1"/>
+
+                            <Setter TargetName="NASACollection"
+                                    Property="Grid.Column"
+                                    Value="0"/>
+
+                            <Setter TargetName="NASACollection"
+                                    Property="Grid.ColumnSpan"
+                                    Value="3"/>
+
+                        </VisualState.Setters>
+
+                    </VisualState>
+
+                </VisualStateGroup>
+
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+
+        <!-- NASA LOGO -->
         <Image Source="nasa_logo.png"
                Grid.Row="0"
                Grid.Column="0"
@@ -24,17 +77,20 @@
                HorizontalOptions="Start"
                VerticalOptions="Center"
                Aspect="AspectFit"/>
-     
-            <Button x:Name="Recent_button"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    Text="Recent"
-                    HeightRequest="50"
-                    Clicked="Recent_Button_Clicked"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Start"
-                    BackgroundColor="#003c92"
-                    />
+
+        <!-- RECENT BUTTON -->
+        <Button x:Name="Recent_button"
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Recent"
+                HeightRequest="50"
+                Clicked="Recent_Button_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Fill"
+                BackgroundColor="#003c92"
+                TextColor="White"/>
+
+        <!-- POPULAR BUTTON -->
         <Button x:Name="Popular_button"
                 Grid.Row="0"
                 Grid.Column="2"
@@ -42,68 +98,83 @@
                 HeightRequest="50"
                 Clicked="Popular_button_Clicked"
                 VerticalOptions="Center"
-                HorizontalOptions="Start"
+                HorizontalOptions="Fill"
                 BackgroundColor="#003c92"
-                />
+                TextColor="White"/>
 
+        <!-- SEARCH -->
         <SearchBar x:Name="SearchInput"
-                       Grid.Row="1"
-                       Grid.ColumnSpan="3"
-                       Placeholder="Search..."
-                       SearchButtonPressed="SearchInput_SearchButtonPressed"/>
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Placeholder="Search..."
+                   SearchButtonPressed="SearchInput_SearchButtonPressed"/>
 
-
+        <!-- COLLECTION -->
         <CollectionView x:Name="NASACollection"
-                Grid.Row="2"
-                Grid.ColumnSpan="3">
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3">
 
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical"
-                           ItemSpacing="0" />
+                                   ItemSpacing="15"/>
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
-                    <Grid HeightRequest="{Binding Source={x:Reference NASACollection}, Path=Height}">
+                    <Frame Padding="0"
+                           Margin="0,0,0,15"
+                           CornerRadius="20"
+                           HasShadow="False"
+                           BorderColor="Transparent">
 
-                        <!-- FULL SCREEN IMAGE -->
-                        <Image Source="{Binding ImageUrl}"
-                       Aspect="AspectFill"
-                       VerticalOptions="Fill"
-                       HorizontalOptions="Fill"/>
+                        <Grid HeightRequest="350">
 
-                        <!-- DARK OVERLAY -->
-                        <BoxView Color="Black"
-                         Opacity="0.35"
-                         VerticalOptions="Fill"
-                         HorizontalOptions="Fill"/>
+                            <!-- IMAGE -->
+                            <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"
+                                   VerticalOptions="Fill"
+                                   HorizontalOptions="Fill"/>
 
-                        <!-- TEXT OVERLAY -->
-                        <VerticalStackLayout Padding="20"
-                                     VerticalOptions="End">
+                            <!-- DARK OVERLAY -->
+                            <BoxView Color="Black"
+                                     Opacity="0.35"
+                                     VerticalOptions="Fill"
+                                     HorizontalOptions="Fill"/>
 
-                            <Label Text="{Binding TitleWithDate}"
-                           FontSize="18"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           MaxLines="2"/>
+                            <!-- TEXT CONTENT -->
+                            <VerticalStackLayout Padding="20"
+                                                 VerticalOptions="End"
+                                                 Spacing="10">
 
-                            <Label Text="{Binding Description}"
-                           FontSize="12"
-                           TextColor="White"
-                           MaxLines="3"/>
+                                <Label Text="{Binding TitleWithDate}"
+                                       FontSize="22"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="2"/>
 
-                            <Button Text="Save"
-                             Clicked="SaveButton_Clicked"
-                             BackgroundColor="#003c92"
-                             TextColor="White"
-                             FontSize="12"
-                             HorizontalOptions="Start"
-                             Padding="10,5"/>
-                        </VerticalStackLayout>
+                                <Label Text="{Binding Description}"
+                                       FontSize="14"
+                                       TextColor="White"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="3"/>
 
-                    </Grid>
+                                <Button Text="Save"
+                                        Clicked="SaveButton_Clicked"
+                                        BackgroundColor="#003c92"
+                                        TextColor="White"
+                                        FontSize="12"
+                                        HorizontalOptions="Start"
+                                        Padding="14,8"/>
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                    </Frame>
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>
