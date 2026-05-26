@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="mobileapps_NASA_API.SearchPage"
+    Title="Search">
+
+    <Grid Padding="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- SEARCH -->
+        <SearchBar x:Name="SearchInput"
+                   Placeholder="Search NASA images..."
+                   SearchButtonPressed="SearchInput_SearchButtonPressed"/>
+
+        <!-- RESULTS -->
+        <CollectionView x:Name="NASACollection"
+                        Grid.Row="1">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Frame Padding="0"
+                           Margin="0,0,0,15"
+                           CornerRadius="20">
+
+                        <Grid HeightRequest="350">
+
+                            <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"/>
+
+                            <BoxView Color="Black"
+                                     Opacity="0.35"/>
+
+                            <VerticalStackLayout Padding="20"
+                                                 VerticalOptions="End">
+
+                                <Label Text="{Binding TitleWithDate}"
+                                       TextColor="White"
+                                       FontSize="22"
+                                       FontAttributes="Bold"/>
+
+                                <Label Text="{Binding Description}"
+                                       TextColor="White"
+                                       MaxLines="3"/>
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                    </Frame>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

@@ -12,8 +12,18 @@
             ContentTemplate="{DataTemplate local:MainPage}" />
 
         <ShellContent
+            Title="Search"
+            ContentTemplate="{DataTemplate local:SearchPage}"/>
+
+        <ShellContent
             Title="Profile"
             ContentTemplate="{DataTemplate local:UserPage}" />
+
+        <ShellContent
+            Title="Settings"
+            ContentTemplate="{DataTemplate local:SettingsPage}" />  
+
+
 
     </TabBar>
 

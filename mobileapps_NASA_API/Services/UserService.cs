@@ -43,8 +43,7 @@ namespace mobileapps_NASA_API.Services
             {
                 CurrentUser = new UserProfile()
                 {
-                    UserName = "Ashton", 
-                    ProfilePicture = @"defaultuser.png", 
+                    UserName = "Ashton",  
                     Lists = new List<SavedList>()
                     {
                         new SavedList { Name = "Favourites",
