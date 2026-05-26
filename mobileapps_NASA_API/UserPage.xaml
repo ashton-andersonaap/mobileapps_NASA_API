@@ -34,31 +34,7 @@
                TextColor="#003c92"
                />
 
-
-            <Border
-               BackgroundColor="Transparent"
-               Grid.Column="0"
-               Grid.Row="1"
-               HeightRequest="60"
-               WidthRequest="60"
-               HorizontalOptions="Center"
-                StrokeThickness="0">
-                <Image Source="defaultuser.png"
-                   Aspect="AspectFit">
-
-                    <Image.Clip>
-                        <EllipseGeometry 
-                        Center="30, 30"
-                        RadiusX="30"
-                        RadiusY="30">
-                        </EllipseGeometry>
-                    </Image.Clip>
-                </Image>
-            </Border>
             
-            
-
-
         </HorizontalStackLayout>
 
         <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="3"

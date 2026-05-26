@@ -1,111 +1,148 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="mobileapps_NASA_API.MainPage">
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="mobileapps_NASA_API.MainPage"
+    Title="NASA Browser">
 
 
     <Grid Padding="20">
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        <Image Source="nasa_logo.png"
-               Grid.Row="0"
-               Grid.Column="0"
-               HeightRequest="60"
-               WidthRequest="60"
-               HorizontalOptions="Start"
-               VerticalOptions="Center"
-               Aspect="AspectFit"/>
-     
+
+        <!-- TOP BAR -->
+        <HorizontalStackLayout
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Spacing="10">
+
+            <Image Source="nasa_logo.png"
+                   HeightRequest="60"
+                   WidthRequest="60"
+                   Aspect="AspectFit"/>
+
             <Button x:Name="Recent_button"
-                    Grid.Row="0"
-                    Grid.Column="1"
                     Text="Recent"
-                    HeightRequest="50"
                     Clicked="Recent_Button_Clicked"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Start"
                     BackgroundColor="#003c92"
-                    />
-        <Button x:Name="Popular_button"
-                Grid.Row="0"
-                Grid.Column="2"
-                Text="Popular"
-                HeightRequest="50"
-                Clicked="Popular_button_Clicked"
-                VerticalOptions="Center"
-                HorizontalOptions="Start"
-                BackgroundColor="#003c92"
-                />
+                    TextColor="White"/>
 
-        <SearchBar x:Name="SearchInput"
-                       Grid.Row="1"
-                       Grid.ColumnSpan="3"
-                       Placeholder="Search..."
-                       SearchButtonPressed="SearchInput_SearchButtonPressed"/>
+            <Button x:Name="Popular_button"
+                    Text="Popular"
+                    Clicked="Popular_button_Clicked"
+                    BackgroundColor="#003c92"
+                    TextColor="White"/>
 
+        </HorizontalStackLayout>
 
+        <!-- COLLECTION -->
         <CollectionView x:Name="NASACollection"
-                Grid.Row="2"
-                Grid.ColumnSpan="3">
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2">
 
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical"
-                           ItemSpacing="0" />
-            </CollectionView.ItemsLayout>
+            <!-- VISUAL STATE MANAGER -->
+            <VisualStateManager.VisualStateGroups>
+
+                <VisualStateGroup>
+
+                    <!-- PORTRAIT -->
+                    <VisualState x:Name="Portrait">
+
+                        <VisualState.StateTriggers>
+                            <OrientationStateTrigger Orientation="Portrait"/>
+                        </VisualState.StateTriggers>
+
+                        <VisualState.Setters>
+
+                            <Setter Property="ItemsLayout">
+                                <LinearItemsLayout Orientation="Vertical"
+                                                   ItemSpacing="15"/>
+                            </Setter>
+
+                        </VisualState.Setters>
+
+                    </VisualState>
+
+                    <!-- LANDSCAPE -->
+                    <VisualState x:Name="Landscape">
+
+                        <VisualState.StateTriggers>
+                            <OrientationStateTrigger Orientation="Landscape"/>
+                        </VisualState.StateTriggers>
+
+                        <VisualState.Setters>
+
+                            <Setter Property="ItemsLayout">
+
+                                <GridItemsLayout Orientation="Vertical"
+                                                 Span="2"
+                                                 VerticalItemSpacing="15"
+                                                 HorizontalItemSpacing="15"/>
+
+                            </Setter>
+
+                        </VisualState.Setters>
+
+                    </VisualState>
+
+                </VisualStateGroup>
+
+            </VisualStateManager.VisualStateGroups>
 
             <CollectionView.ItemTemplate>
+
                 <DataTemplate>
 
-                    <Grid HeightRequest="{Binding Source={x:Reference NASACollection}, Path=Height}">
+                    <Frame Padding="0"
+                           Margin="0,0,0,15"
+                           CornerRadius="20"
+                           BorderColor="Transparent">
 
-                        <!-- FULL SCREEN IMAGE -->
-                        <Image Source="{Binding ImageUrl}"
-                       Aspect="AspectFill"
-                       VerticalOptions="Fill"
-                       HorizontalOptions="Fill"/>
+                        <Grid HeightRequest="350">
 
-                        <!-- DARK OVERLAY -->
-                        <BoxView Color="Black"
-                         Opacity="0.35"
-                         VerticalOptions="Fill"
-                         HorizontalOptions="Fill"/>
+                            <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"/>
 
-                        <!-- TEXT OVERLAY -->
-                        <VerticalStackLayout Padding="20"
-                                     VerticalOptions="End">
+                            <BoxView Color="Black"
+                                     Opacity="0.35"/>
 
-                            <Label Text="{Binding TitleWithDate}"
-                           FontSize="18"
-                           FontAttributes="Bold"
-                           TextColor="White"
-                           MaxLines="2"/>
+                            <VerticalStackLayout Padding="20"
+                                                 VerticalOptions="End">
 
-                            <Label Text="{Binding Description}"
-                           FontSize="12"
-                           TextColor="White"
-                           MaxLines="3"/>
+                                <Label Text="{Binding TitleWithDate}"
+                                       FontSize="22"
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       MaxLines="2"/>
 
-                            <Button Text="Save"
-                             Clicked="SaveButton_Clicked"
-                             BackgroundColor="#003c92"
-                             TextColor="White"
-                             FontSize="12"
-                             HorizontalOptions="Start"
-                             Padding="10,5"/>
-                        </VerticalStackLayout>
+                                <Label Text="{Binding Description}"
+                                       FontSize="14"
+                                       TextColor="White"
+                                       MaxLines="3"/>
 
-                    </Grid>
+                                <Button Text="Save"
+                                        Clicked="SaveButton_Clicked"
+                                        BackgroundColor="#003c92"
+                                        TextColor="White"
+                                        HorizontalOptions="Start"/>
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                    </Frame>
 
                 </DataTemplate>
+
             </CollectionView.ItemTemplate>
 
         </CollectionView>

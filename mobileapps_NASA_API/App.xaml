@@ -1,7 +1,25 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:mobileapps_NASA_API"
              x:Class="mobileapps_NASA_API.App">
+
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <!-- GLOBAL COLORS -->
+            <Color x:Key="PageLight">White</Color>
+            <Color x:Key="PageDark">#121212</Color>
+
+            <!-- GLOBAL STYLE -->
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding Light={StaticResource PageLight},
+                                               Dark={StaticResource PageDark}}" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
 
 </Application>

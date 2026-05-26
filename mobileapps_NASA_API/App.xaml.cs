@@ -8,6 +8,8 @@ namespace mobileapps_NASA_API
         {
             InitializeComponent();
 
+            Application.Current.UserAppTheme = AppTheme.Light; // default
+
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobileapps_NASA_API.SettingsPage"
+             Title="UserPage">
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="3"
+                               Spacing="10"
+                               VerticalOptions="Center">
+
+
+            <Image Source="nasa_logo.png"
+               HeightRequest="60"
+               WidthRequest="60"
+               Aspect="AspectFit"/>
+
+            <Label x:Name="header"
+               Text="Settings"
+               VerticalTextAlignment="Center"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="#003c92"
+               />
+
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="3"
+                               Spacing ="10"
+                               VerticalOptions="Center">
+            <Label Text="Theme: "/>
+            <Button Text="Toggle Theme"
+            Clicked="ToggleTheme_Clicked"
+            BackgroundColor="#003c92"
+            TextColor="White"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

@@ -1,182 +1,105 @@
-﻿//using Android.Runtime;
-using mobileapps_NASA_API.Models;
-using System.Threading.Tasks;
-using System.Text.Json;
+﻿using mobileapps_NASA_API.Models;
 using Microsoft.Maui.Storage;
 using mobileapps_NASA_API.Services;
-using System.Globalization;
 
-namespace mobileapps_NASA_API
+namespace mobileapps_NASA_API;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+    private readonly UserService _userService;
+
+    public MainPage(UserService userService)
     {
-        private readonly UserService _userService;
+        InitializeComponent();
 
+        _userService = userService;
 
-        public MainPage(UserService userService)
+        userService.LoadUser();
+
+        Recent_Button_Clicked(this, EventArgs.Empty);
+    }
+
+    private async void Recent_Button_Clicked(object sender, EventArgs e)
+    {
+        NASA_API_Service service = new();
+
+        var items = await service.GetNASAData("");
+
+        items = items
+            .Where(item => item.data != null && item.data.Length > 0)
+            .OrderByDescending(item => item.data?[0].date_created)
+            .ToList();
+
+        List<NASAItemViewModel> displayList = new();
+
+        foreach (var item in items)
         {
-            InitializeComponent();
-            string lastImageSearch = Preferences.Get("LastImageSearched", "Nebula");
-            SearchInput.Text = lastImageSearch;
+            var title = item.data?[0]?.title;
+            var img = item.links?[0]?.href;
+            var description = item.data?[0]?.description;
+            var date = item.data?[0]?.date_created;
 
-            _userService = userService;
-
-            userService.LoadUser();
-
-        }
-
-        private async void Recent_Button_Clicked(object sender, EventArgs e)
-        {
-
-            NASA_API_Service service = new();
-            var items = await service.GetNASAData("");
-
-            items = items
-                .Where(item => item.data != null && item.data.Length > 0)
-                .OrderByDescending(item => item.data?[0].date_created)
-                .ToList();
-
-            List<NASAItemViewModel> displayList = new();
-
-            foreach (var item in items)
+            if (!string.IsNullOrEmpty(img) &&
+                !string.IsNullOrEmpty(title))
             {
-                var title = item.data?[0]?.title;
-                var img = item.links?[0]?.href;
-                var description = item.data?[0]?.description;
-                var date = item.data?[0]?.date_created;
-
-                if (!string.IsNullOrEmpty(img) && !string.IsNullOrEmpty(title))
+                displayList.Add(new NASAItemViewModel
                 {
-                    displayList.Add(new NASAItemViewModel
-                    {
-                        Id = item.data?[0]?.nasa_id,
-                        Title = title,
-                        ImageUrl = img,
-                        Description = description ?? "No Description",
-                        date = date ?? DateTime.MinValue
-                    });
-                }
-
-                Console.WriteLine($"{title} - {img}");
+                    Id = item.data?[0]?.nasa_id,
+                    Title = title,
+                    ImageUrl = img,
+                    Description = description ?? "No Description",
+                    date = date ?? DateTime.MinValue
+                });
             }
-
-            displayList = displayList
-                .OrderByDescending(x => x.date)
-                .ToList();
-
-            NASACollection.ItemsSource = displayList;
         }
 
-        private async void Popular_button_Clicked(object sender, EventArgs e)
+        NASACollection.ItemsSource =
+            displayList.OrderByDescending(x => x.date);
+    }
+
+    private async void Popular_button_Clicked(object sender, EventArgs e)
+    {
+        NASA_API_Service service = new();
+
+        var items = await service.GetNASAData("");
+
+        List<NASAItemViewModel> displayList = new();
+
+        foreach (var item in items)
         {
+            var title = item.data?[0]?.title;
+            var img = item.links?[0]?.href;
+            var description = item.data?[0]?.description;
+            var date = item.data?[0]?.date_created;
 
-            NASA_API_Service service = new();
-            var items = await service.GetNASAData("");
-
-
-            List<NASAItemViewModel> displayList = new();
-
-            foreach (var item in items)
+            if (!string.IsNullOrEmpty(img) &&
+                !string.IsNullOrEmpty(title))
             {
-                var title = item.data?[0]?.title;
-                var img = item.links?[0]?.href;
-                var description = item.data?[0]?.description;
-                var date = item.data?[0]?.date_created;
-
-                if (!string.IsNullOrEmpty(img) && !string.IsNullOrEmpty(title))
+                displayList.Add(new NASAItemViewModel
                 {
-                    displayList.Add(new NASAItemViewModel
-                    {
-                        Id = item.data?[0]?.nasa_id,
-                        Title = title,
-                        ImageUrl = img,
-                        Description = description ?? "No Description",
-                        date = date ?? DateTime.MinValue
-                    });
-                }
-
-                Console.WriteLine($"{title} - {img}");
+                    Id = item.data?[0]?.nasa_id,
+                    Title = title,
+                    ImageUrl = img,
+                    Description = description ?? "No Description",
+                    date = date ?? DateTime.MinValue
+                });
             }
-
-            NASACollection.ItemsSource = displayList;
         }
 
-        private async void SearchInput_SearchButtonPressed(object sender, EventArgs e)
-        {
-            string query = SearchInput.Text;
+        NASACollection.ItemsSource = displayList;
+    }
 
-            if (string.IsNullOrWhiteSpace(query))
-            {
-                return;
-            }
+    private async void SaveButton_Clicked(object sender, EventArgs e)
+    {
+        var button = sender as Button;
 
+        var item = button?.BindingContext as NASAItemViewModel;
 
+        if (item == null)
+            return;
 
-            NASA_API_Service service = new();
-            var items = await service.GetNASAData(query);
+        _userService.SaveItemToList(item, "Favourites");
 
-            List<NASAItemViewModel> displayList = new();
-
-            foreach (var item in items)
-            {
-                var title = item.data?[0]?.title;
-                var img = item.links?[0]?.href;
-                var description = item.data?[0]?.description;
-                var date = item.data?[0]?.date_created;
-
-                if (!string.IsNullOrEmpty(img) && !string.IsNullOrEmpty(title))
-                {
-                    displayList.Add(new NASAItemViewModel
-                    {
-                        Id = item.data?[0]?.nasa_id,
-                        Title = title,
-                        ImageUrl = img,
-                        Description = description ?? "No Description",
-                        date = date ?? DateTime.MinValue
-                    });
-                }
-
-                Console.WriteLine($"{title} - {img}");
-            }
-
-            displayList = displayList
-             .OrderByDescending(x => x.date)
-             .ToList();
-
-
-            NASACollection.ItemsSource = displayList;
-            Preferences.Set("LastImageSearched", query);
-
-        }
-
-        private async void OnImageTapped(object sender, ItemTappedEventArgs e)
-        {
-            var frame = sender as Border;
-            var item = frame?.BindingContext as NASAItemViewModel;
-
-            if (item == null)
-            { 
-                return;
-            }
-
-
-        }
-
-        private async void SaveButton_Clicked(object sender, EventArgs e)
-        {
-            var button = sender as Button;
-            var item = button?.BindingContext as NASAItemViewModel;
-            string listName = "Favourites";
-
-            if (item == null)
-            {
-                return;
-            }
-
-            _userService.SaveItemToList(item, listName);
-
-            await DisplayAlert("Saved", $"Added to {listName}", "OK");
-
-        }
+        await DisplayAlert("Saved", "Added to favourites", "OK");
     }
 }
