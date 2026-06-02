@@ -78,8 +78,7 @@
               "RelativeToolTip": "mobileapps_NASA_API\\MainPage.xaml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-21T04:30:35.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T04:30:35.42Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "mobileapps_NASA_API\\MainPage.xaml.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAASwKMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T04:30:35.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T04:30:35.45Z"
             },
             {
               "$type": "Document",
@@ -126,7 +124,7 @@
               "RelativeDocumentMoniker": "mobileapps_NASA_API\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\ANDERA\\source\\repos\\mobileapps_NASA_API\\mobileapps_NASA_API\\Services\\UserService.cs",
               "RelativeToolTip": "mobileapps_NASA_API\\Services\\UserService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T04:53:15.433Z",
               "EditorCaption": ""
@@ -154,8 +152,7 @@
               "RelativeToolTip": "mobileapps_NASA_API\\UserPage.xaml.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAB0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T05:19:42.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T05:19:42.347Z"
             },
             {
               "$type": "Document",
@@ -167,8 +164,7 @@
               "RelativeToolTip": "mobileapps_NASA_API\\Models\\UserProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T04:39:54.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T04:39:54.705Z"
             },
             {
               "$type": "Document",
@@ -192,7 +188,8 @@
               "RelativeToolTip": "mobileapps_NASA_API\\AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T05:26:17.981Z"
+              "WhenOpened": "2026-05-12T05:26:17.981Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
